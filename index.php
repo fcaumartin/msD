@@ -1,17 +1,7 @@
-<!doctype html>
-<html lang="fr">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The District: -Accueil</title>
-
-  <link rel="stylesheet" href="dist/assets/index.css">
-
-
-
-<body>
-<?php include 'header.php';
+<?php 
+  $titre = "Accueil";
+  include 'header.php';
+  include 'navbar.php';
 ?>
 
 
@@ -100,13 +90,6 @@
 </div>
 </section>
 
-<?php include 'footer.php';
+<?php 
+  include 'footer.php';
 ?>
-
-<script></script>
-<script type= "module" src = "dist/assets/index.js"></script>
-
-</body>
-</html>
-</body>
-</html>

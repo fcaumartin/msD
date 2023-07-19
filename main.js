@@ -5,6 +5,7 @@
 //
 // Importation du fichier CSS personnalisé
  import './style.css';
+
  import 'bootstrap-icons/font/bootstrap-icons.css';
 
  // Récupérer le formulaire
@@ -20,10 +21,16 @@ function validateForm(event) {
     const question = document.getElementById('question').value;
     const accepter = document.getElementById('accepter').checked;
   
-  
+    if (nom.trim() === '' || email.trim() === '' || sujet === 'Veuillez sélectionner un sujet' || question.trim() === '' || !accepter) {
+      alert('Veuillez remplir tous les champs obligatoires.');
+      
+    }
   
     // Réinitialiser le formulaire
-    document.getElementById('contact-form').reset();
+    if (document.getElementById('contact-form') != null) {
+
+      document.getElementById('contact-form').reset();
+    }
   
     // Afficher un message de succès
     alert('Votre formulaire a été soumis avec succès!');
@@ -33,10 +40,7 @@ function validateForm(event) {
   document.getElementById('contact-form').addEventListener('submit', validateForm);
   
     // Vérifier que tous les champs obligatoires sont remplis
-    if (nom.trim() === '' || email.trim() === '' || sujet === 'Veuillez sélectionner un sujet' || question.trim() === '' || !accepter) {
-      alert('Veuillez remplir tous les champs obligatoires.');
-      
-    }
+    
   
 
     // panier
